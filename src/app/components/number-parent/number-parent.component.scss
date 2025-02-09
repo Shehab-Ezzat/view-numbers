@@ -1,0 +1,55 @@
+.modal {
+    margin-bottom: 100px;
+    background-color: white;
+    
+    &__header {
+        direction: rtl;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1em;
+        margin-bottom: 1em;
+        padding: 0 20px;
+        height: 3rem;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    &__main-content {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+
+    &__subtitle {
+        font-weight: 600;
+        font-size: larger;
+    }
+
+    &__title {
+        background-color: rgba(235, 234, 234, 0.6);
+        color: rgba(0, 0, 255, 0.408);
+        font-size: x-large;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    &__close-btn {
+        background-color: rgba(235, 234, 234, 0.6);
+        border: none;
+        border-radius: 5px;
+        padding: 7px 10px;
+        font-weight: 700;
+        transition: color 0.3s ease;
+            &:hover{
+                i{
+                    color: red;  
+                }
+                cursor: pointer;
+            }
+        i{
+             color: black;
+        }
+
+       
+    }
+}

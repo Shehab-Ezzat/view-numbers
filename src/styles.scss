@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.cdnfonts.com/css/neo-sans-arabic");
+
+$primary-bg: #ECF0F5;
+$font-family: "Neo Sans Arabic", sans-serif;
+
+body {
+  background-color: $primary-bg;
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+html[dir="rtl"] {
+  .modal-container {
+    direction: rtl;
+    text-align: right;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    width: 90%;
+  }
+}

@@ -1,0 +1,76 @@
+<div class="card">
+    <div class="card__header">
+      <div class="card__main-header">
+        <h2 class="card__number">{{ number }}</h2>
+        <button class="card__status-btn">قيد الاستخدام</button>
+      </div>
+      <div class="card__dropdown" #dropdownContainer>
+        <button (click)="toggleList($event);  isActive = !isActive" class="card__dropdown-btn" >
+            <i class="fa-solid fa-ellipsis" [class.bg-blue]="isActive"></i>
+        </button>
+        <ul *ngIf="isListOpen" class="card__dropdown-list">
+          <div>
+            <i class="fa-solid fa-pen"></i>
+            <li>تعديل الرقم</li>
+          </div>
+          <div>
+            <i class="fa-solid fa-link-slash"></i>
+            <li>الغاء التعيين</li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="card__content">
+      <div class="card__row">
+        <div class="card__info">
+          <span>اسم البرتوكول</span>
+          <span class="card__text">{{ protocol }}</span>
+        </div>
+        <div class="card__separator"></div>
+        <div class="card__info">
+          <span>الدولة</span>
+          <div class="card__container">
+            <img src="https://flagcdn.com/w40/sa.png" alt="Saudi Arabia Flag" class="card__logo" />
+            <span class="card__text">{{ country }}</span>
+          </div>
+        </div>
+        <div class="card__separator"></div>
+        <div class="card__info">
+          <span>العميل الحالي</span>
+          <div class="card__container">
+            <img src="https://flagcdn.com/w40/sa.png" alt="Saudi Arabia Flag" class="card__logo" />
+            <span class="card__text">{{ client }}</span>
+          </div>
+        </div>
+        <div class="card__separator"></div>
+        <div class="card__info">
+          <span>عدد الامتدادات</span>
+          <span class="card__text">{{ formatWithZero(extension) }}</span>
+        </div>
+      </div>
+  
+      <div class="card__row">
+        <div class="card__info">
+          <span>تاريخ آخر شحنة</span>
+          <span class="card__text">{{ date }}</span>
+        </div>
+        <div class="card__separator"></div>
+        <div class="card__info">
+          <span>الرصيد الحالي</span>
+          <span class="card__text">{{ balance | currencyEg }}</span>
+        </div>
+        <div class="card__separator"></div>
+        <div class="card__info">
+          <span>الرصيد المستخدم للعميل الحالي</span>
+          <span class="card__text">{{ clientBalance | currencyEg }}</span>
+        </div>
+        <div class="card__separator"></div>
+        <div class="card__info">
+          <span>الرصيد المستخدم للرقم ككل</span>
+          <span class="card__text">{{ allBalance | currencyEg }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,25 @@
+<div class="modal">
+    <header class="modal__header">
+        <div class="modal__main-content">
+            <h2 class="modal__title">#</h2>
+            <span class="modal__subtitle">عرض الرقم</span>
+        </div>  
+        <button class="modal__close-btn">
+            <i class="fa-solid fa-xmark" ></i>
+        </button>
+    </header>
+
+    <app-number-header
+        [number]="selectedNumber"
+        [country]="selectedCountry"
+        [client]="client"
+        [protocol]="company"
+        [date]="date"
+        [extension]="extension"
+        [clientBalance]="clientBalance"
+        [balance]="balance"
+        [allBalance]="allBalance">
+    </app-number-header>
+
+    <app-number-footer></app-number-footer>
+</div>
